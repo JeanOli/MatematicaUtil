@@ -11,48 +11,48 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class MatematicaController {
     private final FuncoesMatematicas funcoesMatematicas; 
     
-<span class="nc" id="L14">    private final String PAGINA_MMC_MDC_PRODUTO = &quot;mmc_mdc_produto&quot;;</span>
-<span class="nc" id="L15">    private final String PAGINA_RAIO_CIRCULO = &quot;raio_circulo&quot;;</span>
-<span class="nc" id="L16">    private final String PAGINA_POTENCIA = &quot;potencia&quot;;</span>
+<span class="fc" id="L14">    private final String PAGINA_MMC_MDC_PRODUTO = &quot;mmc_mdc_produto&quot;;</span>
+<span class="fc" id="L15">    private final String PAGINA_RAIO_CIRCULO = &quot;raio_circulo&quot;;</span>
+<span class="fc" id="L16">    private final String PAGINA_POTENCIA = &quot;potencia&quot;;</span>
 
-<span class="nc" id="L18">    public MatematicaController() {</span>
-<span class="nc" id="L19">        this.funcoesMatematicas = new FuncoesMatematicas();</span>
-<span class="nc" id="L20">    }</span>
+<span class="fc" id="L18">    public MatematicaController() {</span>
+<span class="fc" id="L19">        this.funcoesMatematicas = new FuncoesMatematicas();</span>
+<span class="fc" id="L20">    }</span>
     
     @RequestMapping( &quot;/&quot; )
-    public String paginaMMC() {
-<span class="nc" id="L24">        return &quot;index&quot;;</span>
+    public String paginaIndex() {
+<span class="fc" id="L24">        return &quot;index&quot;;</span>
     }
     
     @RequestMapping( &quot;/mmc&quot; )
     public String paginaMMC(Model model) {
-<span class="nc" id="L29">        model.addAttribute(&quot;formAction&quot;, &quot;calcularMMC&quot;);</span>
-<span class="nc" id="L30">        model.addAttribute(&quot;tituloPagina&quot;, &quot;Cálculo do Mínimo Multiplo Comun&quot;);</span>
-<span class="nc" id="L31">        return PAGINA_MMC_MDC_PRODUTO;</span>
+<span class="fc" id="L29">        model.addAttribute(&quot;formAction&quot;, &quot;calcularMMC&quot;);</span>
+<span class="fc" id="L30">        model.addAttribute(&quot;tituloPagina&quot;, &quot;Cálculo do Mínimo Multiplo Comun&quot;);</span>
+<span class="fc" id="L31">        return PAGINA_MMC_MDC_PRODUTO;</span>
     }
     
     @RequestMapping( &quot;/mdc&quot; )
     public String paginaMDC(Model model) {
-<span class="nc" id="L36">        model.addAttribute(&quot;formAction&quot;, &quot;calcularMDC&quot;);</span>
-<span class="nc" id="L37">        model.addAttribute(&quot;tituloPagina&quot;, &quot;Cálculo do Mínimo Divisor Comun&quot;);</span>
-<span class="nc" id="L38">        return PAGINA_MMC_MDC_PRODUTO;</span>
+<span class="fc" id="L36">        model.addAttribute(&quot;formAction&quot;, &quot;calcularMDC&quot;);</span>
+<span class="fc" id="L37">        model.addAttribute(&quot;tituloPagina&quot;, &quot;Cálculo do Mínimo Divisor Comun&quot;);</span>
+<span class="fc" id="L38">        return PAGINA_MMC_MDC_PRODUTO;</span>
     }
     
     @RequestMapping( &quot;/produto&quot; )
     public String paginaProduto(Model model) {
-<span class="nc" id="L43">        model.addAttribute(&quot;formAction&quot;, &quot;calcularProduto&quot;);</span>
-<span class="nc" id="L44">        model.addAttribute(&quot;tituloPagina&quot;, &quot;Cálculo do Produto&quot;);</span>
-<span class="nc" id="L45">        return PAGINA_MMC_MDC_PRODUTO;</span>
+<span class="fc" id="L43">        model.addAttribute(&quot;formAction&quot;, &quot;calcularProduto&quot;);</span>
+<span class="fc" id="L44">        model.addAttribute(&quot;tituloPagina&quot;, &quot;Cálculo do Produto&quot;);</span>
+<span class="fc" id="L45">        return PAGINA_MMC_MDC_PRODUTO;</span>
     }
     
     @RequestMapping( &quot;/raioCirculo&quot; )
-    public String paginaMDC() {
-<span class="nc" id="L50">        return PAGINA_RAIO_CIRCULO;</span>
+    public String raioCirculo() {
+<span class="fc" id="L50">        return PAGINA_RAIO_CIRCULO;</span>
     }
     
     @RequestMapping( &quot;/potencia&quot; )
     public String paginaPotencia() {
-<span class="nc" id="L55">        return PAGINA_POTENCIA;</span>
+<span class="fc" id="L55">        return PAGINA_POTENCIA;</span>
     }
     
     @RequestMapping( value = &quot;/calcularMMC&quot;, method = RequestMethod.POST)
@@ -61,11 +61,11 @@ public class MatematicaController {
             @RequestParam(
             value=&quot;numero2&quot;, required=true) Integer numero2, Model model) {
         
-<span class="nc" id="L64">        Integer resultado = funcoesMatematicas.calcularMMC(numero1, numero2);</span>
+<span class="fc" id="L64">        Integer resultado = funcoesMatematicas.calcularMMC(numero1, numero2);</span>
         
-<span class="nc" id="L66">        model.addAttribute(&quot;resultado&quot;, resultado);</span>
+<span class="fc" id="L66">        model.addAttribute(&quot;resultado&quot;, resultado);</span>
         
-<span class="nc" id="L68">        return PAGINA_MMC_MDC_PRODUTO;</span>
+<span class="fc" id="L68">        return PAGINA_MMC_MDC_PRODUTO;</span>
     }
 
     @RequestMapping( value = &quot;/calcularMDC&quot;, method = RequestMethod.POST)
@@ -74,11 +74,11 @@ public class MatematicaController {
             @RequestParam(
             value=&quot;numero2&quot;, required=true) Integer numero2, Model model) {
         
-<span class="nc" id="L77">        Integer resultado = funcoesMatematicas.calcularMDC(numero1, numero2);</span>
+<span class="fc" id="L77">        Integer resultado = funcoesMatematicas.calcularMDC(numero1, numero2);</span>
         
-<span class="nc" id="L79">        model.addAttribute(&quot;resultado&quot;, resultado);</span>
+<span class="fc" id="L79">        model.addAttribute(&quot;resultado&quot;, resultado);</span>
         
-<span class="nc" id="L81">        return PAGINA_MMC_MDC_PRODUTO;</span>
+<span class="fc" id="L81">        return PAGINA_MMC_MDC_PRODUTO;</span>
     }
     
     @RequestMapping( value = &quot;/calcularProduto&quot;, method = RequestMethod.POST)
@@ -87,22 +87,22 @@ public class MatematicaController {
             @RequestParam(
             value=&quot;numero2&quot;, required=true) Integer numero2, Model model) {
         
-<span class="nc" id="L90">        Integer resultado = funcoesMatematicas.calcularProduto( numero1, numero2);</span>
+<span class="fc" id="L90">        Integer resultado = funcoesMatematicas.calcularProduto( numero1, numero2);</span>
         
-<span class="nc" id="L92">        model.addAttribute(&quot;resultado&quot;, resultado);</span>
+<span class="fc" id="L92">        model.addAttribute(&quot;resultado&quot;, resultado);</span>
         
-<span class="nc" id="L94">        return PAGINA_MMC_MDC_PRODUTO;</span>
+<span class="fc" id="L94">        return PAGINA_MMC_MDC_PRODUTO;</span>
     }
     
     @RequestMapping( value = &quot;/calcularAreaCirculo&quot;, method = RequestMethod.POST)
     public String calcularAreaCirculo(@RequestParam(
             value=&quot;raioCirculo&quot;, required=true) Double raioCirculo, Model model) {
         
-<span class="nc" id="L101">        Double resultado = funcoesMatematicas.calcularAreaCirculo( raioCirculo );</span>
+<span class="fc" id="L101">        Double resultado = funcoesMatematicas.calcularAreaCirculo( raioCirculo );</span>
         
-<span class="nc" id="L103">        model.addAttribute(&quot;resultado&quot;, resultado);</span>
+<span class="fc" id="L103">        model.addAttribute(&quot;resultado&quot;, resultado);</span>
         
-<span class="nc" id="L105">        return PAGINA_RAIO_CIRCULO;</span>
+<span class="fc" id="L105">        return PAGINA_RAIO_CIRCULO;</span>
     }
     
     @RequestMapping( value = &quot;/calcularPotencia&quot;, method = RequestMethod.POST)
@@ -111,11 +111,11 @@ public class MatematicaController {
             @RequestParam(
             value=&quot;potencia&quot;, required=true) Integer potencia, Model model) {
         
-<span class="nc" id="L114">        Integer resultado = funcoesMatematicas.calcularPotencia( base, potencia );</span>
+<span class="fc" id="L114">        Integer resultado = funcoesMatematicas.calcularPotencia( base, potencia );</span>
         
-<span class="nc" id="L116">        model.addAttribute(&quot;resultado&quot;, resultado);</span>
+<span class="fc" id="L116">        model.addAttribute(&quot;resultado&quot;, resultado);</span>
         
-<span class="nc" id="L118">        return PAGINA_POTENCIA;</span>
+<span class="fc" id="L118">        return PAGINA_POTENCIA;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.5.201505241946</span></div></body></html>

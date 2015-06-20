@@ -51,4 +51,28 @@ public class FuncoesMatematicasTest {
         
         assertEquals( esperado, retorno );
     }
+    
+    @Test
+    public void testarSeOCalculoDaSomaPassando10Eh2Retornara12() {
+        Integer retorno = funcoes.calcularSoma( 10, 2 );
+        Integer esperado = 12;
+        
+        assertEquals( esperado, retorno );
+    }
+    
+    @Test
+    public void testarSeOCalculoDaDivisaoPassando10Eh2Retornara5() {
+        Integer retorno = funcoes.calcularDivisao( 10, 2 );
+        Integer esperado = 5;
+        
+        assertEquals( esperado, retorno );
+    }
+    
+    @Test
+    public void testarSeOCalculoDaSubtracaoPassando10Eh2Retornara8() {
+        Integer retorno = funcoes.calcularSubtracao( 10, 2 );
+        Integer esperado = 8;
+        
+        assertEquals( esperado, retorno );
+    }
 }

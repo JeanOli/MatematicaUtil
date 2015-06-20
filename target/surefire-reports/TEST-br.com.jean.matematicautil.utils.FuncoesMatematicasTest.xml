@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="5" failures="0" name="br.com.jean.matematicautil.utils.FuncoesMatematicasTest" time="0.009" errors="0" skipped="0">
+<testsuite tests="8" failures="0" name="br.com.jean.matematicautil.utils.FuncoesMatematicasTest" time="0.006" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/usr/local/java/jre/lib/amd64"/>
@@ -14,7 +14,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value="unknown"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="/home/tulio/NetBeansProjects/MatematicaUtil"/>
+    <property name="user.dir" value="/home/tulio/Projetos/MatematicaUtil"/>
     <property name="java.runtime.version" value="1.8.0_31-b13"/>
     <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
     <property name="java.endorsed.dirs" value="/usr/local/java/jre/lib/endorsed"/>
@@ -59,9 +59,12 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="br.com.jean.matematicautil.utils.FuncoesMatematicasTest" name="testarSeOCalculoDoMDCPassando10Eh2Retornara2" time="0.005"/>
+  <testcase classname="br.com.jean.matematicautil.utils.FuncoesMatematicasTest" name="testarSeOCalculoDaPotenciaDeUmNumeroPassando10Eh2Retornara100" time="0.005"/>
+  <testcase classname="br.com.jean.matematicautil.utils.FuncoesMatematicasTest" name="testarSeOCalculoDaSomaPassando10Eh2Retornara12" time="0"/>
+  <testcase classname="br.com.jean.matematicautil.utils.FuncoesMatematicasTest" name="testarSeOCalculoDaDivisaoPassando10Eh2Retornara5" time="0"/>
+  <testcase classname="br.com.jean.matematicautil.utils.FuncoesMatematicasTest" name="testarSeOCalculoDaSubtracaoPassando10Eh2Retornara8" time="0"/>
+  <testcase classname="br.com.jean.matematicautil.utils.FuncoesMatematicasTest" name="testarSeOCalculoDoProdutoPassando10Eh2Retornara20" time="0.001"/>
   <testcase classname="br.com.jean.matematicautil.utils.FuncoesMatematicasTest" name="testarSeOCalculoDaAreaDoCirculoPassando10Retornara314" time="0"/>
   <testcase classname="br.com.jean.matematicautil.utils.FuncoesMatematicasTest" name="testarSeOCalculoDoMMCPassando10Eh2Retornara10" time="0"/>
-  <testcase classname="br.com.jean.matematicautil.utils.FuncoesMatematicasTest" name="testarSeOCalculoDaPotenciaDeUmNumeroPassando10Eh2Retornara100" time="0"/>
-  <testcase classname="br.com.jean.matematicautil.utils.FuncoesMatematicasTest" name="testarSeOCalculoDoProdutoPassando10Eh2Retornara20" time="0.004"/>
+  <testcase classname="br.com.jean.matematicautil.utils.FuncoesMatematicasTest" name="testarSeOCalculoDoMDCPassando10Eh2Retornara2" time="0"/>
 </testsuite>

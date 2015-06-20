@@ -36,6 +36,18 @@ public class FuncoesMatematicas {
         return numero1 * numero2;
     }
     
+    public Integer calcularSoma( Integer numero1, Integer numero2 ) {
+        return numero1 + numero2;
+    }
+    
+    public Integer calcularDivisao( Integer numero1, Integer numero2 ) {
+        return numero1 / numero2;
+    }
+    
+    public Integer calcularSubtracao( Integer numero1, Integer numero2 ) {
+        return numero1 - numero2;
+    }
+        
     public Double calcularAreaCirculo( Double raio ) {
         return Math.PI * (raio * raio);
     }

@@ -20,7 +20,7 @@ public class MatematicaController {
     }
     
     @RequestMapping( "/" )
-    public String paginaMMC() {
+    public String paginaIndex() {
         return "index";
     }
     
@@ -46,7 +46,7 @@ public class MatematicaController {
     }
     
     @RequestMapping( "/raioCirculo" )
-    public String paginaMDC() {
+    public String raioCirculo() {
         return PAGINA_RAIO_CIRCULO;
     }
     
