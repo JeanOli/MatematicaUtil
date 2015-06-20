@@ -69,6 +69,54 @@ public class MatematicaControllerTest {
     }
     
     @Test
+    public void testarPaginaVerificarCasasDecimais() {
+        String retorno = controller.paginaVerificarCasasDecimais();
+        String esperado = "verificar-casas-decimais";
+        
+        assertEquals(esperado, retorno);
+    }
+    
+    @Test
+    public void testarPaginaVerificarQtdNumerosPares() {
+        String retorno = controller.paginaVerificarQtdNumerosPares();
+        String esperado = "verificar-numeros-pares";
+        
+        assertEquals(esperado, retorno);
+    }
+    
+    @Test
+    public void testarPaginaVerificarSeEhPar() {
+        String retorno = controller.paginaVerificarSeEhPar();
+        String esperado = "verificar-se-par";
+        
+        assertEquals(esperado, retorno);
+    }
+    
+    @Test
+    public void testarPaginaVerificarSeExisteNumerosIguais() {
+        String retorno = controller.paginaVerificarSeExisteNumerosIguais();
+        String esperado = "verificar-numeros-iguais";
+        
+        assertEquals(esperado, retorno);
+    }
+    
+    @Test
+    public void testarPaginaSeExisteNumerosIguais() {
+        String retorno = controller.paginaVerificarSeExisteNumerosIguais();
+        String esperado = "verificar-numeros-iguais";
+        
+        assertEquals(esperado, retorno);
+    }
+    
+    @Test
+    public void testarPaginaVerificarSeEhMaiorQueOutro() {
+        String retorno = controller.paginaVerificarSeEhMaiorQueOutro();
+        String esperado = "verificar-numero-maior";
+        
+        assertEquals(esperado, retorno);
+    }
+    
+    @Test
     public void testarCalcularMMC() {
         String retorno = controller.calcularMMC(10, 2, model);
         String esperado = "mmc_mdc_produto";
@@ -104,6 +152,46 @@ public class MatematicaControllerTest {
     public void testarCalcularPotencia() {
         String retorno = controller.calcularPotencia(10, 2, model);
         String esperado = "potencia";
+        
+        assertEquals(esperado, retorno);
+    }
+    
+    @Test
+    public void testarVerificarSeTemCasasDecimais() {
+        String retorno = controller.verificarSeTemCasasDecimais(10.0, model);
+        String esperado = "verificar-casas-decimais";
+        
+        assertEquals(esperado, retorno);
+    }
+    
+    @Test
+    public void testarVerificarSeNumeralEhPar() {
+        String retorno = controller.verificarSeNumeralEhPar(2, model);
+        String esperado = "verificar-se-par";
+        
+        assertEquals(esperado, retorno);
+    }
+    
+    @Test
+    public void testarVerificarQuantosNumerosParesTemNaString() {
+        String retorno = controller.verificarQuantosNumerosParesTemNaString( "245786", model);
+        String esperado = "verificar-numeros-pares";
+        
+        assertEquals(esperado, retorno);
+    }
+    
+    @Test
+    public void testarVerificarSeExistemNumerosIguais() {
+        String retorno = controller.verificarSeExistemNumerosIguais( "1233", model);
+        String esperado = "verificar-numeros-iguais";
+        
+        assertEquals(esperado, retorno);
+    }
+    
+    @Test
+    public void testarVerificarSeEhMaiorQueOutro() {
+        String retorno = controller.verificarSeEhMaiorQueOutro( 20, 2, model);
+        String esperado = "verificar-numero-maior";
         
         assertEquals(esperado, retorno);
     }

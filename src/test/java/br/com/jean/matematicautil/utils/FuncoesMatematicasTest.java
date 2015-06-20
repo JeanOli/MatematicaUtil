@@ -1,6 +1,8 @@
 package br.com.jean.matematicautil.utils;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 import org.junit.Before;
 
@@ -74,5 +76,73 @@ public class FuncoesMatematicasTest {
         Integer esperado = 8;
         
         assertEquals( esperado, retorno );
+    }
+    
+    @Test
+    public void testarSeIraRetornarTrueQuandoTestarSeNumeroTemCasasDecimais() {
+        assertTrue( funcoes.numeralTemCasasDecimais(10.2) );
+    }
+    
+    @Test
+    public void testarSeIraRetornarFalseQuandoTestarSeNumeroTemCasasDecimais() {
+        assertFalse( funcoes.numeralTemCasasDecimais(10.0) );
+    }
+    
+    @Test
+    public void testarSeIraRetornarTrueQuandoTestarSeNumeroEhPar() {
+        assertTrue( funcoes.numeralEhPar( 10 ) );
+    }
+    
+    @Test
+    public void testarSeIraRetornarFalseQuandoTestarSeNumeroEhImpar() {
+        assertFalse( funcoes.numeralEhPar( 9 ) );
+    }
+    
+    @Test
+    public void testarSeIraNessaSequenciaDeNumerosTera5Pares() {
+        Integer retorno = funcoes.verificarQuantosNumerosParesTemNaString( "2538286" );
+        Integer esperado = 5;
+        
+        assertEquals( esperado, retorno );
+    }
+    
+    @Test
+    public void testarSeIraTerNumerosRepetidos() {
+        Boolean retorno = funcoes.verificarSeExistemNumerosIguais( "1231" );
+        
+        assertTrue( retorno );
+    }
+    
+    @Test
+    public void testarSeNaoIraTerNumerosRepetidos() {
+        Boolean retorno = funcoes.verificarSeExistemNumerosIguais( "123" );
+        
+        assertFalse( retorno );
+    }
+    
+    @Test
+    public void testarSeNaoSe10EhMaiorQue2() {
+        Integer retorno = funcoes.verificarSeEhMaiorQueOutro( 10, 2 );
+        Integer esperado = 10;
+        
+        assertEquals( esperado, retorno );
+    }
+    
+    @Test
+    public void testarSeNaoSe2EhMaiorQue1() {
+        Integer retorno = funcoes.verificarSeEhMaiorQueOutro( 1, 2 );
+        Integer esperado = 2;
+        
+        assertEquals( esperado, retorno );
+    }
+    
+    @Test
+    public void testarSe10EhPositivo() {
+        assertTrue( funcoes.verificarSeEhPositivo( 10 ) );
+    }
+    
+    @Test
+    public void testarSeMenos10EhNegativo() {
+        assertFalse( funcoes.verificarSeEhPositivo( -10 ) );
     }
 }
