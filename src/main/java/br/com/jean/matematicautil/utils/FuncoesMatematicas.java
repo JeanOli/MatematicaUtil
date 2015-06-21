@@ -163,7 +163,7 @@ public class FuncoesMatematicas {
     private void verificarNumeros() {
         boolean teste = false;
         
-        String numerosTeste = "12313187687877686867878978989789687";
+        String numerosTeste = "1231318768787768686787897898978968888887";
         
         if( numerosTeste.charAt(0) == '0' )
             teste = true;
@@ -215,6 +215,10 @@ public class FuncoesMatematicas {
         char num17 = numerosTeste.charAt(17);
         char num18 = numerosTeste.charAt(18);
         char num19 = numerosTeste.charAt(19);
+        char num20 = numerosTeste.charAt(20);
+        char num21 = numerosTeste.charAt(21);
+        char num22 = numerosTeste.charAt(22);
+        char num23 = numerosTeste.charAt(23);
     }
     
     public Integer verificarSeEhMaiorQueOutro( Integer numero1, Integer numero2 ) {
