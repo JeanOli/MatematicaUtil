@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Cálculo do Mínimo Multiplo Comun</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <h3>Cálculo do Mínimo Multiplo Comun</h3>
+    <form action="calcularMMC" method="POST">
+        <label>Numeral 1</label>
+        <input type="text" name="numero1" />
+        <br />
+        <label>Numeral 2</label>
+        <input type="text" name="numero2" />
+        <br />
+        <input type="submit" value="Calcular" />
+    </form>
+    
+    <p th:if="${resultado}" th:text="'Resultado: ' + ${resultado}" />
+    
+    <a href="/" title="Voltar">Voltar</a>
+</body>
+</html>

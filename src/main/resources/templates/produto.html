@@ -1,12 +1,12 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title th:text="${tituloPagina}" />
+    <title>Calcular o Produto</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-    <h3 th:text="${tituloPagina}" />
-    <form th:action="${formAction}" method="POST">
+    <h3>Calcular o Produto</h3>
+    <form action="calcularProduto" method="POST">
         <label>Numeral 1</label>
         <input type="text" name="numero1" />
         <br />

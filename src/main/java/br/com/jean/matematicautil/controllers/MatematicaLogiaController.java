@@ -8,76 +8,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-public class MatematicaController {
-    private final FuncoesMatematicas funcoesMatematicas; 
-    
-    private final String PAGINA_MMC_MDC_PRODUTO = "mmc_mdc_produto";
-    private final String PAGINA_RAIO_CIRCULO = "raio_circulo";
-    private final String PAGINA_POTENCIA = "potencia";
+public class MatematicaLogiaController {
+    private final FuncoesMatematicas funcoesMatematicas;
 
-    public MatematicaController() {
+    public MatematicaLogiaController() {
         this.funcoesMatematicas = new FuncoesMatematicas();
-    }
-    
-    @RequestMapping( "/" )
-    public String paginaIndex() {
-        return "index";
-    }
-    
-    @RequestMapping( "/mmc" )
-    public String paginaMMC(Model model) {
-        model.addAttribute("formAction", "calcularMMC");
-        model.addAttribute("tituloPagina", "Cálculo do Mínimo Multiplo Comun");
-        return PAGINA_MMC_MDC_PRODUTO;
-    }
-    
-    @RequestMapping( "/mdc" )
-    public String paginaMDC(Model model) {
-        model.addAttribute("formAction", "calcularMDC");
-        model.addAttribute("tituloPagina", "Cálculo do Mínimo Divisor Comun");
-        return PAGINA_MMC_MDC_PRODUTO;
-    }
-    
-    @RequestMapping( "/produto" )
-    public String paginaProduto(Model model) {
-        model.addAttribute("formAction", "calcularProduto");
-        model.addAttribute("tituloPagina", "Cálculo do Produto");
-        return PAGINA_MMC_MDC_PRODUTO;
-    }
-    
-    @RequestMapping( "/raioCirculo" )
-    public String raioCirculo() {
-        return PAGINA_RAIO_CIRCULO;
-    }
-    
-    @RequestMapping( "/potencia" )
-    public String paginaPotencia() {
-        return PAGINA_POTENCIA;
-    }
-    
-    @RequestMapping( "/verificarCasasDecimais" )
-    public String paginaVerificarCasasDecimais() {
-        return "verificar-casas-decimais";
-    }
-    
-    @RequestMapping( "/verificarSeEhPar" )
-    public String paginaVerificarSeEhPar() {
-        return "verificar-se-par";
-    }
-    
-    @RequestMapping( "/verificarQtdNumerosPares" )
-    public String paginaVerificarQtdNumerosPares() {
-        return "verificar-numeros-pares";
-    }
-    
-    @RequestMapping( "/verificarSeExisteNumerosIguais" )
-    public String paginaVerificarSeExisteNumerosIguais() {
-        return "verificar-numeros-iguais";
-    }
-    
-    @RequestMapping( "/verificarSeEhMaiorQueOutro" )
-    public String paginaVerificarSeEhMaiorQueOutro() {
-        return "verificar-numero-maior";
     }
     
     @RequestMapping( value = "/calcularMMC", method = RequestMethod.POST)
@@ -90,7 +25,7 @@ public class MatematicaController {
         
         model.addAttribute("resultado", resultado);
         
-        return PAGINA_MMC_MDC_PRODUTO;
+        return "mmc";
     }
 
     @RequestMapping( value = "/calcularMDC", method = RequestMethod.POST)
@@ -103,7 +38,7 @@ public class MatematicaController {
         
         model.addAttribute("resultado", resultado);
         
-        return PAGINA_MMC_MDC_PRODUTO;
+        return "mdc";
     }
     
     @RequestMapping( value = "/calcularProduto", method = RequestMethod.POST)
@@ -116,7 +51,7 @@ public class MatematicaController {
         
         model.addAttribute("resultado", resultado);
         
-        return PAGINA_MMC_MDC_PRODUTO;
+        return "produto";
     }
     
     @RequestMapping( value = "/calcularAreaCirculo", method = RequestMethod.POST)
@@ -127,7 +62,7 @@ public class MatematicaController {
         
         model.addAttribute("resultado", resultado);
         
-        return PAGINA_RAIO_CIRCULO;
+        return "raio_circulo";
     }
     
     @RequestMapping( value = "/calcularPotencia", method = RequestMethod.POST)
@@ -140,7 +75,7 @@ public class MatematicaController {
         
         model.addAttribute("resultado", resultado);
         
-        return PAGINA_POTENCIA;
+        return "potencia";
     }
     
     @RequestMapping( value = "/verificarSeTemCasasDecimais", method = RequestMethod.POST)
@@ -155,7 +90,7 @@ public class MatematicaController {
         
         model.addAttribute("resultado", resultado);
         
-        return "verificar-casas-decimais";
+        return "verificar_casas_decimais";
     }
     
     @RequestMapping( value = "/verificarSeNumeralEhPar", method = RequestMethod.POST)
@@ -170,24 +105,24 @@ public class MatematicaController {
         
         model.addAttribute("resultado", resultado);
         
-        return "verificar-se-par";
+        return "verificar_se_par";
     }
     
-    @RequestMapping( value = "/verificarQuantosNumerosParesTemNaString", method = RequestMethod.POST)
-    public String verificarQuantosNumerosParesTemNaString(@RequestParam(
-            value="numero", required=true) String numeros, Model model) {
+    @RequestMapping( value = "/verificarQtdNumerosParesTemNaString", method = RequestMethod.POST)
+    public String verificarQtdNumerosParesTemNaString(@RequestParam(
+            value="numeros", required=true) String numeros, Model model) {
         
         Integer qtdNumerosPares = funcoesMatematicas
                 .verificarQuantosNumerosParesTemNaString(numeros);
         
         model.addAttribute("resultado", qtdNumerosPares);
         
-        return "verificar-numeros-pares";
+        return "verificar_numeros_pares";
     }
     
     @RequestMapping( value = "/verificarSeExistemNumerosIguais", method = RequestMethod.POST)
     public String verificarSeExistemNumerosIguais(@RequestParam(
-            value="numero", required=true) String numeros, Model model) {
+            value="numeros", required=true) String numeros, Model model) {
         
         Boolean retorno = funcoesMatematicas
                 .verificarSeExistemNumerosIguais(numeros);
@@ -201,7 +136,7 @@ public class MatematicaController {
         
         model.addAttribute("resultado", resultado);
         
-        return "verificar-numeros-iguais";
+        return "verificar_numeros_iguais";
     }
     
     @RequestMapping( value = "/verificarSeEhMaiorQueOutro", method = RequestMethod.POST)
@@ -212,8 +147,8 @@ public class MatematicaController {
         
         Integer resultado = funcoesMatematicas.verificarSeEhMaiorQueOutro( numero1, numero2 );
         
-        model.addAttribute("resultado", "Maior: " + resultado);
+        model.addAttribute("resultado", resultado + " é o maior");
         
-        return "verificar-numero-maior";
+        return "verificar_numero_maior";
     }
 }

@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Verificar se existe números iguais</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <h3>Verificar se existe números iguais</h3>
+    <form action="verificarSeExistemNumerosIguais" method="POST">
+        <label>Numeros (tudo junto, sem espaço)</label>
+        <input type="text" name="numeros" />
+        <br />
+        <input type="submit" value="Calcular" />
+    </form>
+    
+    <p th:if="${resultado}" th:text="'Resultado: ' + ${resultado}" />
+    
+    <a href="/" title="Voltar">Voltar</a>
+</body>
+</html>

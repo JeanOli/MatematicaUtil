@@ -1,4 +1,4 @@
-package br.com.jean.matematicautil.utils;
+package br.com.jean.matematicautil.uitest;
 
 import static org.junit.Assert.assertEquals;
 import org.junit.Before;
