@@ -91,11 +91,11 @@ public class MatematicaLogicaControllerTest {
         assertEquals(esperado, retorno);
     }
     
-    /*@Test
+    @Test
     public void testarVerificarSeEhMaiorQueOutro() {
         String retorno = controller.verificarSeEhMaiorQueOutro( 20, 2, model);
         String esperado = "verificar_numero_maior";
         
         assertEquals(esperado, retorno);
-    }*/
+    }
 }
