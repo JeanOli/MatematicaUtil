@@ -13,14 +13,14 @@
     </properties>
     
     <parent>
-        <groupId>org.springframework.boot</groupId>
+        <groupId>org.springframework.boot</groupId><!--Obrigatorio -->
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>1.2.4.RELEASE</version>
     </parent>
     
     <dependencies>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
+            <groupId>org.springframework.boot</groupId><!--Dependencia da spring -->
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
             <version>1.2.4.RELEASE</version>
         </dependency>
@@ -31,20 +31,14 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>junit</groupId>
+            <groupId>junit</groupId> <!--Teste unitario -->
             <artifactId>junit</artifactId>
             <version>4.10</version>
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
+            <groupId>org.seleniumhq.selenium</groupId> <!-- Teste de Interface -->
             <artifactId>selenium-java</artifactId>
-            <version>2.45.0</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-chrome-driver</artifactId>
             <version>2.45.0</version>
             <scope>test</scope>
         </dependency>
@@ -53,20 +47,20 @@
     <build>
         <plugins>
             <plugin>
-                <groupId>org.springframework.boot</groupId>
+                <groupId>org.springframework.boot</groupId><!-- PLug da Spring para rodar-->
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>1.2.4.RELEASE</version>
             </plugin>
             <plugin>
-                <groupId>org.eluder.coveralls</groupId>
+                <groupId>org.eluder.coveralls</groupId><!--PLug que ira mandar para o Teste-->
                 <artifactId>coveralls-maven-plugin</artifactId>
                 <version>3.1.0</version>
                 <configuration>
-                    <repoToken>x3wL52jxV5GcwwdyGNvEsPRNhpnyArsdz</repoToken>
+                    <repoToken>x3wL52jxV5GcwwdyGNvEsPRNhpnyArsdz</repoToken><!-- Chave do Coveralls-->
                 </configuration>
             </plugin>
             <plugin>
-                <groupId>org.jacoco</groupId>
+                <groupId>org.jacoco</groupId> <!-- Calcular Coverage Calculuo dos teste-->
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>0.7.5.201505241946</version>
                 <executions>
@@ -79,5 +73,5 @@
                 </executions>
             </plugin>
         </plugins>
-    </build>
+    </build> 
 </project>
